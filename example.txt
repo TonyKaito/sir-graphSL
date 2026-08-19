@@ -1,0 +1,21 @@
+ex1 :: graph
+  start >(i1)> mid | only_move
+
+ex1 :: circ
+  G >(i1)> 1 :: cur_src | input
+  1 >(g3)> G :: res
+  1 >(g1)> 2 :: res
+  2 >(g2)> G :: res | output
+
+  G := ground
+
+ex1 :: eq 
+  i1 (t) := 10 * u(t)
+  i1 (s) := 10 / s
+
+main :: act
+  render ex1 // circ || graph
+  nodal ex1 // circ && eq
+  lap_nodal ex1 // circ && eq
+  phasor ex1 // circ && eq
+  solve ex1 // eq
