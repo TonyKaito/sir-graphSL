@@ -96,12 +96,16 @@ export function parse_node(lexer : Lexer) : [Node, boolean]
 			{
 				case TokenType[TokenType.DOUBLE_COLON]:
 				{
-					statement = {kind: NodeKind[NodeKind.OBJ_DEC], name: var_name, dtype: "" , block: []};
+					statement = {kind: NodeKind[NodeKind.OBJ_DEC], name: var_name, dtype: "" , block: {}};
 					
 					[token, ok] = lexer_next(lexer);
 					if (!ok) return [null, false];
 					if (!is_keyword(token)) return [null, false];
 					statement.dtype = token.text;
+					
+					let [block, block_ok] = parse_node(lexer);
+					if (!block_ok) return [null, false];
+					statement.block = block;	
 					
 					// console.log("succ1");
 					return [statement, true];

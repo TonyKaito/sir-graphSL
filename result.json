@@ -5,159 +5,154 @@
       "kind": "OBJ_DEC",
       "name": "ex1",
       "dtype": "graph",
-      "block": []
-    },
-    {
-      "kind": "BLOCK",
-      "block": [
-        {
-          "kind": "GRAPH_STMT",
-          "source": "start",
-          "morphism": "i1",
-          "dest": "mid",
-          "dtype": "",
-          "init_tag": "only_move"
-        }
-      ]
+      "block": {
+        "kind": "BLOCK",
+        "block": [
+          {
+            "kind": "GRAPH_STMT",
+            "source": "start",
+            "morphism": "i1",
+            "dest": "mid",
+            "dtype": "",
+            "init_tag": "only_move"
+          }
+        ]
+      }
     },
     {
       "kind": "OBJ_DEC",
       "name": "ex1",
       "dtype": "tag",
-      "block": []
-    },
-    {
-      "kind": "BLOCK",
-      "block": [
-        {
-          "kind": "TAG_STMT",
-          "obj": "start",
-          "param": "",
-          "value": {
-            "kind": "MATH_EXP",
-            "eq": "\\text{poggers}"
+      "block": {
+        "kind": "BLOCK",
+        "block": [
+          {
+            "kind": "TAG_STMT",
+            "obj": "start",
+            "param": "",
+            "value": {
+              "kind": "MATH_EXP",
+              "eq": "\\text{poggers}"
+            }
+          },
+          {
+            "kind": "TAG_STMT",
+            "obj": "i1",
+            "param": "",
+            "value": {
+              "kind": "MATH_EXP",
+              "eq": "\\text{what was i thinking}"
+            }
           }
-        },
-        {
-          "kind": "TAG_STMT",
-          "obj": "i1",
-          "param": "",
-          "value": {
-            "kind": "MATH_EXP",
-            "eq": "\\text{what was i thinking}"
-          }
-        }
-      ]
+        ]
+      }
     },
     {
       "kind": "OBJ_DEC",
       "name": "ex2",
       "dtype": "circ",
-      "block": []
-    },
-    {
-      "kind": "BLOCK",
-      "block": [
-        {
-          "kind": "GRAPH_STMT",
-          "source": "G",
-          "morphism": "i1",
-          "dest": "1",
-          "dtype": "cur_src",
-          "init_tag": ""
-        },
-        {
-          "kind": "GRAPH_STMT",
-          "source": "1",
-          "morphism": "g3",
-          "dest": "G",
-          "dtype": "res",
-          "init_tag": ""
-        },
-        {
-          "kind": "GRAPH_STMT",
-          "source": "1",
-          "morphism": "g1",
-          "dest": "2",
-          "dtype": "res",
-          "init_tag": ""
-        },
-        {
-          "kind": "GRAPH_STMT",
-          "source": "2",
-          "morphism": "g2",
-          "dest": "G",
-          "dtype": "res",
-          "init_tag": ""
-        }
-      ]
+      "block": {
+        "kind": "BLOCK",
+        "block": [
+          {
+            "kind": "GRAPH_STMT",
+            "source": "G",
+            "morphism": "i1",
+            "dest": "1",
+            "dtype": "cur_src",
+            "init_tag": ""
+          },
+          {
+            "kind": "GRAPH_STMT",
+            "source": "1",
+            "morphism": "g3",
+            "dest": "G",
+            "dtype": "res",
+            "init_tag": ""
+          },
+          {
+            "kind": "GRAPH_STMT",
+            "source": "1",
+            "morphism": "g1",
+            "dest": "2",
+            "dtype": "res",
+            "init_tag": ""
+          },
+          {
+            "kind": "GRAPH_STMT",
+            "source": "2",
+            "morphism": "g2",
+            "dest": "G",
+            "dtype": "res",
+            "init_tag": ""
+          }
+        ]
+      }
     },
     {
       "kind": "OBJ_DEC",
       "name": "ex2",
       "dtype": "tag",
-      "block": []
-    },
-    {
-      "kind": "BLOCK",
-      "block": [
-        {
-          "kind": "TAG_STMT",
-          "obj": "i1",
-          "param": "",
-          "value": {
-            "kind": "SYMBOL",
-            "text": "input"
+      "block": {
+        "kind": "BLOCK",
+        "block": [
+          {
+            "kind": "TAG_STMT",
+            "obj": "i1",
+            "param": "",
+            "value": {
+              "kind": "SYMBOL",
+              "text": "input"
+            }
+          },
+          {
+            "kind": "TAG_STMT",
+            "obj": "g2",
+            "param": "",
+            "value": {
+              "kind": "SYMBOL",
+              "text": "output"
+            }
+          },
+          {
+            "kind": "TAG_STMT",
+            "obj": "G",
+            "param": "",
+            "value": {
+              "kind": "SYMBOL",
+              "text": "ground"
+            }
           }
-        },
-        {
-          "kind": "TAG_STMT",
-          "obj": "g2",
-          "param": "",
-          "value": {
-            "kind": "SYMBOL",
-            "text": "output"
-          }
-        },
-        {
-          "kind": "TAG_STMT",
-          "obj": "G",
-          "param": "",
-          "value": {
-            "kind": "SYMBOL",
-            "text": "ground"
-          }
-        }
-      ]
+        ]
+      }
     },
     {
       "kind": "OBJ_DEC",
       "name": "ex2",
       "dtype": "eq",
-      "block": []
-    },
-    {
-      "kind": "BLOCK",
-      "block": [
-        {
-          "kind": "TAG_STMT",
-          "obj": "i1",
-          "param": "t",
-          "value": {
-            "kind": "MATH_EXP",
-            "eq": "10 * u(t)"
+      "block": {
+        "kind": "BLOCK",
+        "block": [
+          {
+            "kind": "TAG_STMT",
+            "obj": "i1",
+            "param": "t",
+            "value": {
+              "kind": "MATH_EXP",
+              "eq": "10 * u(t)"
+            }
+          },
+          {
+            "kind": "TAG_STMT",
+            "obj": "i1",
+            "param": "s",
+            "value": {
+              "kind": "MATH_EXP",
+              "eq": "10 / s"
+            }
           }
-        },
-        {
-          "kind": "TAG_STMT",
-          "obj": "i1",
-          "param": "s",
-          "value": {
-            "kind": "MATH_EXP",
-            "eq": "10 / s"
-          }
-        }
-      ]
+        ]
+      }
     }
   ]
 }
