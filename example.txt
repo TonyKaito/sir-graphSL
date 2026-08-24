@@ -20,15 +20,17 @@ ex2 :: eq
   i1 (t) := $10 * u(t)$
   i1 (s) := $10 / s$
 
-main :: act
-  render ex1 // circ || graph
-  nodal ex1 // circ && eq
-  lap_nodal ex1 // circ && eq
-  phasor ex1 // circ && eq
-  solve ex1 // eq
+// // TODO(kt): support for these actions
+//main :: act
+//  render ex1 // circ || graph
+//  nodal ex1 // circ && eq
+//  lap_nodal ex1 // circ && eq
+//  phasor ex1 // circ && eq
+//  solve ex1 // eq
   
   
 // // EBNF...? kind of
+// // TODO(kt): add support for 'act_statement'
 // program | code_block
 //         ;
 // 
@@ -41,8 +43,8 @@ main :: act
 // statement | SYMBOL ( obj_dec || graph_statement || tag_statement)
 //           ;
 // 
-// graph_statement | ARROW_PAREN SYMBOL PAREN_ARROW SYMBOL [ DOUBLE_COLON SYMBOL ]
+// graph_statement | ARROW_PAREN SYMBOL PAREN_ARROW SYMBOL [ DOUBLE_COLON SYMBOL ] [ VERT_BAR SYMBOL ]
 //                 ;
 // 
-// tag_statement | { LEFT_PAREN param RIGHT_PAREN } := ( SYMBOL || MATH_EXP )
+// tag_statement | [ LEFT_PAREN SYMBOL RIGHT_PAREN ] := ( SYMBOL || MATH_EXP )
 //               ;
