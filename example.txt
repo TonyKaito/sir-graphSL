@@ -20,6 +20,12 @@ ex2 :: eq
   i1 (t) := $10 * u(t)$
   i1 (s) := $10 / s$
 
+// // TODO(kt): support for graph-graph relations
+//ex3 :: map ex1 ex2
+//  ex1.start == ex2.G
+//  ex1.mid == ex2.1
+//  ex1.i1 == ex2.i1
+
 // // TODO(kt): support for these actions
 //main :: act
 //  render ex1 // circ || graph
@@ -30,7 +36,7 @@ ex2 :: eq
   
   
 // // EBNF...? kind of
-// // TODO(kt): add support for 'act_statement'
+// // TODO(kt): add support for 'act_statement' and 'map_statement'
 // program | code_block
 //         ;
 // 

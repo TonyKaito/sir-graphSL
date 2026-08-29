@@ -8,6 +8,7 @@ export enum NodeKind
 	BLOCK
 }
 
+// TODO(kt): add path and row, for error handling
 // NOTE(kt): terrible tagged union workaround...?
 export type Node = 
 | {

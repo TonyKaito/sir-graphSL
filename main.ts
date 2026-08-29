@@ -2,6 +2,7 @@
 import { new_lexer } from './lexer.ts'; 
 //import { new_lexer, lexer_next, TokenType } from './lexer.ts'; 
 import { parse_node } from './parser.ts';
+import { check_semantics } from './semantics.ts';
 
 
 function main() : number
@@ -13,9 +14,18 @@ function main() : number
 	
 	let lexer = new_lexer(path, text);
 	let [node, ok] = parse_node(lexer);
+	let [objects, errors] = check_semantics(node);
 	
-	const output : string = "result.json"
-	Deno.writeTextFileSync(output, JSON.stringify(node, null, 2));
+	if (errors.length == 0)
+	{
+		const output : string = "result.json";
+		Deno.writeTextFileSync(output, JSON.stringify(objects, null, 2));
+	}
+	else
+	{
+		console.log("ERRORS WERE FOUND");
+		console.log(errors);
+	}
 	
 //	while (true)
 //	{
