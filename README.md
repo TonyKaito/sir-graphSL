@@ -3,8 +3,8 @@ Small directed graph (and circuit analysis) scripting language. Mostly needed fo
 
 **STILL UNFINISHED AND EXPERIMENTAL:** no guarantee of quality. feel free to modify as needed. this project is moreso akin to a proof-of-concept than a fully fledged language of many capabilities
 
-### Demo (of unfinished product)
-![](https://github.com/TonyKaito/sir-graphSL/demo_01.gif)
+### Demo (of unfinished product)[
+![](https://github.com/TonyKaito/sir-graphSL/demo_01.gif)](https://github.com/TonyKaito/sir-graphSL/blob/main/demo_01.gif)
 
 ### Current Grammar
 ```
