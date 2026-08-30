@@ -3,7 +3,8 @@ Small directed graph (and circuit analysis) scripting language. Mostly needed fo
 
 **STILL UNFINISHED AND EXPERIMENTAL:** no guarantee of quality. feel free to modify as needed. this project is moreso akin to a proof-of-concept than a fully fledged language of many capabilities
 
-Initial lexer and parser inspired off of: https://www.youtube.com/watch?v=9wAFshF7Pu4
+### Demo (of unfinished product)
+![](https://github.com/TonyKaito/sir-graphSL/demo_01.gif)
 
 ### Current Grammar
 ```
@@ -49,3 +50,6 @@ ex2 :: eq
   i1 (t) := $10 * u(t)$
   i1 (s) := $10 / s$
 ```
+
+
+Initial lexer and parser inspired off of: https://www.youtube.com/watch?v=9wAFshF7Pu4

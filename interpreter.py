@@ -15,7 +15,8 @@ def createNodes(gameData, node_list):
     
     gameData["nd_id"] = list(range(0, len(node_list)))
     
-    gameData["nd_name"] = copy.deepcopy(node_list)
+    names = list(map(lambda x : bytes(x, 'utf-8'), copy.deepcopy(node_list)))
+    gameData["nd_name"] = names
     
     gameData["nd_pos"] = [0] * len(node_list)
     gameData["nd_pos"] = list(map(lambda x : pr.Vector2(100 * random.randint(0, 8), 100 * random.randint(0, 6)), gameData["nd_pos"]))
@@ -30,7 +31,7 @@ def createConns(gameData, con_list):
     
     gameData["con_id"] = list(range(0, len(con_list)))
     
-    names = list(map(lambda x : x["name"], con_list))
+    names = list(map(lambda x : bytes(x["name"], 'utf-8'), con_list))
     gameData["con_name"] = names
     
     vertices = list(map(lambda x : x["vertices"], con_list))
